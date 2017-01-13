@@ -1,0 +1,1 @@
+- `select * from setval('records_id_seq', 42);` - manually reset an ID counter.
