@@ -8,3 +8,13 @@
 - `%config InlineBackend.figure_format = 'retina'` - 2x resolution plots for
   retina display.
 - `%load_ext autoreload; %autoreload 2` - reload imports automatically.
+
+# pandas
+
+Group DataFrame and take top row
+
+```python
+best = dat.\
+          groupby('column1').\
+          agg(lambda x: x.loc[x['column2'].argmax(),])
+```
